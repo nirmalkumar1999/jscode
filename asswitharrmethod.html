@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array assaignment , using array methods</h1>
+    <script>
+        let arr=[{name:'utsav',sal:1000,age:25,add:'delhi'},
+                {name:'vicky',sal:1500,age:23,add:'odisha'},
+                {name:'d',sal:800,age:24,add:'delhi'},
+                {name:'c',sal:700,age:27,add:'nepal'},
+                {name:'utsav',sal:2000,age:30,add:'jaipur'},
+                {name:'utx',sal:3000,age:35,add:'jaipur'}
+        ]
+        
+    //1.all emp name in array
+//    let result=''
+//    result=arr.map(item=>item.name)
+//    console.log(result)
+
+
+    //2.emp with maxsalary
+
+// let result1=arr.reduce((acc,item)=>{
+//     if(item.sal>acc.sal)
+//     {
+//         acc=item
+//     }
+//     return acc
+// })
+// console.log(result1.name,result1.sal)
+
+
+    //3.emp with minsalary
+
+// let result1=arr.reduce((acc,item)=>{
+//     if(item.sal<acc.sal)
+//     {
+//         acc=item
+//     }
+//     return acc
+// })
+// console.log(result1.name,result1.sal)
+
+
+    //4.all emp their add is delhi
+// let result=''
+// result=arr.filter(item=> item.add === 'delhi');
+// console.log(result);
+
+
+    //5.age>=25
+// arr.forEach((item,i,o_arr)=>{
+//     if(item.age>=25)
+//     {
+//         console.log(item)
+//     }
+// })
+   
+
+    //6.emp total sal
+// let sum=0
+// arr.forEach((item,i,o_arr)=>{
+//     sum+=item.sal
+// })
+// console.log(sum)
+
+
+    //7.all emp avg age
+// let sum=0
+// sum=arr.reduce((acc,item )=> {
+//     return acc+item.sal
+// },0)
+// console.log('sum of all emp :',sum)
+
+// let avg=sum/arr.length
+// console.log('average sal :',avg)
+
+
+    //8.all emp count 
+// let result=''
+// result=arr.length
+// console.log(result)
+
+
+    //9.emp name D replaced with D_company
+// let result=''
+// result = arr.map(item => {
+//     if (item.name === 'd') {
+//         item.name = 'D_company'
+//     }
+//     return item.name
+// })
+
+// console.log(result)    
+
+
+    //10.all emp in their name 'ut' word is included
+// let result=''
+// result = arr.map(item =>{
+// return { name:'ut' + item.name  }
+// })
+
+// console.log(result)
+
+
+    //11.sort all emp in assending according to their sal
+// let result=''
+// result=arr.sort((a,b)=>{
+//     return a.sal-b.sal
+// })
+
+// console.log(result)
+
+    </script>
+</body>
+</html>

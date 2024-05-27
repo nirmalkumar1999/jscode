@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="id" id="head1">i am nirmal1</h1>
+        <h1 class="id" id="head2">i am nirmal2</h1>
+        <h1 class="id" id="head3">i am nirmal3</h1>
+    </div>
+   
+</body>
+<script>
+    let result=''
+        //get element by class name
+    // result=document.getElementsByClassName('head')
+    // console.log(result)
+        //get element by tag name
+    // result=document.getElementsByTagName('h1')
+    // console.log(result)
+        // QSA
+        // by class name
+    // result=document.querySelectorAll('.head')
+    // console.log(result)
+    //     //by tag name
+    // result=document.querySelectorAll('h1')
+    // console.log(result)
+            //by query
+    result=document.querySelectorAll('.container>h1')
+    console.log(result)
+  
+
+</script>
+</html>
