@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <table id="tab"></table>
+
+<script>
+    let table=document.getElementById('tab')
+    console.log(tab)
+    let tr
+    let td
+    for(i=1;i<=5;i++)
+    {
+        tr=document.createElement('tr')
+        table.append(tr)
+        if(i%2==0)
+        {
+            tr.style.background='red'
+        }
+        else
+            tr.style.background='yellow'
+        for(let j=1;j<=4;j++)
+        {
+            td=document.createElement('td')
+            tr.append(td)
+            td.innerText='nirmal$'
+            td.style.border='2px solid black'
+            td.style.width='300px'
+            td.style.height='100px'
+            td.style.textAlign='center'
+        }
+    }
+   
+</script>
+</body>
+</html>
