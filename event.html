@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+
+            <!-- attribute way -->
+    <!-- <h1 id="head">hello how are you</h1>
+    <button onclick="greetingHandler()">click</button> 
+    <script>
+            let head=document.getElementById('head')
+            function greetingHandler()
+            {
+                head.style.background='aqua'
+                console.log('hi i am nirmal')
+            }     
+    </script> -->
+
+
+            <!-- reference way -->   
+    <!-- <h1 id="head">hello i am  mouse event</h1>
+    <button  id="btn">click</button>
+    <script>
+          let btn=document.getElementById('btn')
+          let head=document.getElementById('head')
+          function greetingHandler()
+          {
+            head.style.background='orange'
+            console.log('hello')
+          }
+          btn.onclick=greetingHandler
+    </script> -->
+
+
+            <!-- addeventlistner -->
+     <h1 id="head">hello i am  mouse event</h1>
+    <button  id="btn">click</button>
+    <script>
+        let btn=document.getElementById('btn')
+        let head=document.getElementById('head')
+        btn.addEventListener('click',()=>{
+            head.style.background='grey'
+            console.log('i am nirmal')
+        })
+    </script>
+
+
+</body>
+</html>
