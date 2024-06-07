@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button#input{
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+   </head>
+<body>
+        <div id='container'>
+            <button id="input"></button>
+            <br>
+            <br>
+            <button id="id1">red</button>
+            <button id="id2">blue</button>
+            <button id="id3">black</button>
+            <button id="id4">orange</button>
+        </div>
+        <script>
+            let id1=document.getElementById('id1')
+            id1.addEventListener('click',()=>{
+                input.style.background='red'
+            })
+            let id2=document.getElementById('id2')
+            id2.addEventListener('click',()=>{
+                input.style.background="blue"
+            })
+            let id3=document.getElementById('id3')
+            id3.addEventListener('click',()=>{
+                input.style.background="black"
+            })
+            let id4=document.getElementById('id4')
+            id4.addEventListener('click',()=>{
+                input.style.background="orange"
+            })
+        </script>
+</body>
+</html>
