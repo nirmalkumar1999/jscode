@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container1">
+    <input type="text"  placeholder=" " id="container">
+    <button>submit</button>
+    </div>
+    <script>
+        let container=document.getElementById('container')
+        container.addEventListener('submit',()=>{
+            if('submit'<10)
+            {
+                container.style.background='black'
+                container.style.color='white'
+            }
+            else{
+                container.style.background='red'
+                container.style.color='black'
+            }
+        })
+        
+           
+    </script>
+</body>
+</html>

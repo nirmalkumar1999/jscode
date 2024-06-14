@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+<h1>JavaScript Rest and spread operator</h1>
+<div class="sample"></div>
+<div style="color: green;" class="result"></div>
+<button class="btn">Spread Operator</button>
+<h3>
+Click on the above button to concatenate array using spread operator
+</h3>
+<button class="btn">Rest Operator</button>
+<div style="color: green;" class="result"></div>
+<h3>
+Click on the above button to add some numbers using rest operator
+</h3>
+<script>
+let sampleEle = document.querySelector(".sample");
+let btnEle = document.querySelectorAll(".btn");
+let resEle = document.querySelectorAll(".result");
+let arr = [2, 3, 4, 5];
+let arr1 = ["a", "b", "c", "d"];
+sampleEle.innerHTML = "arr = " + arr + "<br> arr1 = " + arr1;
+function addArr(num, ...ar) {
+let sum = num;
+ar.forEach((item) => {
+sum += item;
+});
+resEle[1].innerHTML = "Sum of the elements = " + sum;
+}
+btnEle[0].addEventListener("click", () => {
+resEle[0].innerHTML = "Concatenated array = " + [...arr, ...arr1];
+});
+btnEle[1].addEventListener("click", () => {
+addArr(44, 11, 35, 44, 22, 99);
+});
+</script>
+</body>
+</html>

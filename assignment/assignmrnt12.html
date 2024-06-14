@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 2px solid black;
+            width: 350px;
+            text-align: center;
+        }
+        form{
+            margin-left: 500px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Electicity bill</h1>
+
+    <div id="container">
+        <form action="">
+                    <br>
+                    <br>
+                    <label for="">Unit consumption</label>
+                    
+                    <input type="number" placeholder="Enter Units" name="unit" id="unit">
+                    <br>
+                    <br>
+                    <label for="">Category</label>
+                    
+                    <select name="" id="category">
+                    <option value="1">General</option>
+                    <option value="2">OBC</option>
+                    <option value="3">Others</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="">Customer name</label>
+                    <input type="text" placeholder="Enter name" name="" id="name">
+                    <br>
+                    <br>
+                    <button id="btn">Click here</button>
+                    <br>
+                    <br>
+        </form>
+    </div>
+<script>
+    let btn = document.getElementById('btn')
+    btn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    let unit = document.getElementById('unit');
+    let category = document.getElementById('category');
+    let name = document.getElementById('name');
+    let temp = 0;
+        if(!unit.value || !category.value || !name.value)
+        {
+            alert('all fields are required')
+        } 
+        if(category.value == 1)
+        {
+            if(unit.value <= 100 && unit.value != "")
+            {
+                alert('free')           
+            }
+            if(unit.value > 100 && unit.value < 300)
+            {
+                temp = unit.value - 100;
+                temp *= 8;
+                alert(`amount to be paid ${temp}`)
+            }
+            if(unit.value >= 300){
+                temp = unit.value - 100;
+                temp *= 15;
+                alert(`amount to be paid ${temp}`)
+            }
+        }
+        if(category.value == 2)
+        {
+            if(unit.value <= 200)
+            {
+                alert('free')           
+            }
+            if(unit.value > 200 && unit.value < 400)
+            {
+                temp = unit.value - 100;
+                temp *= 8;
+                alert(`amount to be paid ${temp}`)
+            }
+            if(unit.value >= 400)
+            {
+                temp = unit.value - 100;
+                temp *= 15;
+                alert(`amount to be paid ${temp}`)
+            }
+        }
+        if(category.value == 3)
+        {
+            if(unit.value <= 500)
+            {
+                alert('free')           
+            }
+            if(unit.value > 500)
+            {
+                temp = unit.value *15;
+                alert(`amount to be paid ${temp}`)
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">1</div>
+    <buton id="inc" onclick='inc()'>inc</buton>
+    <button id="dec" onclick="dec()">dec</button>
+    <script>
+        let count=1
+        let incbtn=document.getElementById('inc')
+        let decbtn=document.getElementById('dec')
+        let container=document.getElementById('container')
+        incbtn.addEventListener('click',()=>{
+            count++
+            container.innerText=count
+            if(count>1)
+            {
+                decbtn.style.display='inline-block'
+            }
+        })
+        decbtn.addEventListener('click',()=>{
+            count--
+            container.innerText=count
+            if(count==1)
+            {
+                decbtn.style.display='none'
+            }
+        })
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //in array
+        let arr=[1,2,3,4,5]
+            //copy
+        let result=[...arr]
+        console.log(arr==result)
+            //concat
+        let arr2=[6,'nirmal','BCM',7]
+        let result1=[...arr,...arr2]
+        console.log(result1)
+
+            //in object
+        let details={
+            name:'nirmal',
+            add:'bcm'
+        }
+            //copy
+        let details1={...details}
+        console.log(details==details1)
+            //concat
+        let emp={
+            age:24,
+            name:'murty'
+        }
+          console.log('emp',emp)
+        console.log(...details,...details1)
+        
+        
+    </script>
+</body>
+</html>

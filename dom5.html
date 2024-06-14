@@ -6,21 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
- <body>
-    <div id="container">
-        
+    <div class="container">
+        <p id="para" class="para1">lorem1</p>
+        <p id="para" class="para2">lorem2</p>
+        <p id="para" class="para3">lorem3</p>
+        <p id="para" class="para4">lorem4</p>
+        <p id="para" class="para5">lorem5</p>
     </div>
 </body>
 <script>
-    let result=document.getElementById('container')
-    result.innerHTML='<h1> hello </h1>'
-    result.style.background='yellow'
-    result.style.color='red'
-    result.style.border='2px solid red'
-    result.style.width='100px'
-    result.style.height='100px'
-    result.style.textAlign='center'
+    let container=document.getElementById('container')
+    let button=document.createElement('button')
+    button.innerText="click here"
+
 </script>
-</body>
 </html>

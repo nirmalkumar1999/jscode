@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 500px;
+            text-align: center;
+            font-size: 50px;    
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        let str = 'nirmal123'
+        let user = prompt('enter password')
+        let container = document.querySelector('#container')
+        if (str == user) {
+            container.style.background = 'green'
+            container.innerText = 'password valid'
+            container.setAttribute('margin-top','100px')
+        }
+        else {
+            container.style.background = 'red';
+            container.innerText = 'password invalid'
+        }
+
+    </script>
+</body> 
+
+</html>
