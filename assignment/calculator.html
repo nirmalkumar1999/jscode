@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         .calc {
-            background-color: gray;
+            background-color: black;
             color: white;
             height: auto;
             width: 270px;
@@ -33,7 +33,7 @@
                     <input type="number" class="display form-control" id="display"><br><br>
                     <input type="button" class="btn btn-warning" value="C" id="clear">
                     <input type="button" class="btn btn-warning ms-3" value="x" onclick="backspace()">
-                    <input type="button" class="btn btn-warning ms-3" value="%">
+                    <input type="button" class="btn btn-warning ms-3" id="per" value="%">
                     <input type="button" class="btn btn-warning ms-3" value="/"><br><br>
                     <input type="button" class="btn btn-primary" value="7" onclick="seven()">
                     <input type="button" class="btn btn-primary ms-3" value="8" onclick="eight()">
@@ -48,8 +48,8 @@
                     <input type="button" class="btn btn-primary ms-3" value="3" onclick="three()">
                     <input type="button" class="btn btn-warning ms-3" value="+"><br><br>
                     <input type="button" class="btn btn-primary" value="0" onclick="zero()">
-                    <input type="button" class="btn btn-primary ms-3" value="00">
-                    <input type="button" class="btn btn-primary ms-3" value=".">
+                    <input type="button" class="btn btn-primary ms-3" value="00" onclick="tzero()">
+                    <input type="button" class="btn btn-primary ms-3" value="." onclick="point()">
                     <input type="button" class="btn btn-warning ms-3" value="=">
                 </form>
             </div>
@@ -154,6 +154,15 @@
             }
             else {
                 document.querySelector('#display').value = document.querySelector('#display').value + '0'
+            }
+        }
+        //  tzero()
+        let tzero = () => {
+            if (document.querySelector("#display").value == '') {
+                document.querySelector('#display').value = '00'
+            }
+            else {
+                document.querySelector('#display').value = document.querySelector('#display').value + '00'
             }
         }
     </script>
