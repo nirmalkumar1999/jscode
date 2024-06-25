@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changing Boxes</title>
+    <title>Color Changing box</title>
     <style>
         #container {
             display: flex;
@@ -51,7 +51,7 @@
         <button id="stopBtn">Stop</button>
     </div>
     <script>
-        let boxes = document.querySelectorAll('.box');
+        let box = document.querySelectorAll('.box');
         let startButton = document.getElementById('startBtn');
         let stopButton = document.getElementById('stopBtn');
         let interval;
@@ -69,11 +69,11 @@
 
         //color change function for boxes
         function changeColor() {
-            boxes.forEach((box) => {
+            box.forEach((box) => {
                 box.style.backgroundColor = 'getRandomColor()'
             });
-            boxes[currentIndex].style.backgroundColor = getRandomColor();
-            currentIndex = (currentIndex + 1) % boxes.length;
+            box[currentIndex].style.backgroundColor = getRandomColor();
+            currentIndex = (currentIndex + 1) % box.length;
             console.log(currentIndex);
         }
 
@@ -84,7 +84,7 @@
         });
         stopBtn.addEventListener('click', () => {
             clearInterval(interval);
-            boxes.forEach((box) => {
+            box.forEach((box) => {
                 box.style.backgroundColor = 'getRandomColor()'
 
             });
