@@ -151,9 +151,7 @@
             data.forEach(item => {
                 const months = new Date(item.date).getMonth();
                 monthvalues[months] += item.price;
-                console.log(months);
             })
-            console.log(monthvalues)
 
             const ctx = document.getElementById('barChart').getContext('2d');
             if (window.bar) window.bar.destroy();
@@ -180,7 +178,7 @@
         }
 
         // Initial print
-        printHandler(globalArr);
+        printHandler();
     </script>
 </body>
 
